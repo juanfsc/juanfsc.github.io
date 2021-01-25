@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+/*Navbar*/
+header {
+    width: 100vw;
+    height: 70px;
+    background-color: #F7F2EE;
+    padding: 10px 0 ;
+}
+ 
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.logo {
+    height: 50px;
+    color: #9A6C4C; 
+ }
+.menuIcono {
+    height: 40px;
+    color: #9A6C4C;
+}
+nav {
+    position: absolute;
+    background-image: linear-gradient(#F7F2EE,#fcefe5);
+    top:70px;
+    left:0;
+    width: 100vw;
+}
+nav ul {
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content:right;
+    align-items: center;
+    
+}
+nav ul li {
+    padding: 0 15px;
+    font-size: 3.5vw;
+}
+nav ul li a {
+    
+    color: #C4A187;
+    text-decoration: none;
+    
+    
+}
+nav ul li a:hover, nav ul li a:focus {
+    color: #9A6C4C;
+    transition: all 0.8s;
+ }
+.activeNavbar {
+    color:#a1846e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.buscarLogo {
+    width: 1.5vw;
+    
+}
+.buscarInput {
+    background-color: transparent;
+    border: transparent;
+    width: 8.96vw;
+}
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ nav ul {
+    max-height: 300px;
+    padding: 15px 0;
+    transition: all 0.5s;
+}
+/*Pagina Index*/
+
+.flexIndex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    align-items: center;
+    animation-name: animacionIndex;
+    animation-duration: 3s;
+    animation-timing-function: ease-in; 
+}
+.flexTitulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.imagenIndex {
+    width: 75vw;
+    border-radius: 10%;
+    margin: 10px;
+    transition: all .8s;
+}
+.imagenIndex:hover {
+    transform: scale(1.05);
+    
+}
+.titulo {
+    font-size: 10vw;
+    margin: 15px;
+    font-weight: 700;
+
+}
+.subTitulo {
+    font-size: 4vw;
+    font-weight: 400;
+    margin: 15px;
+    color: #9A6C4C;
+}
+/*Pagina recetas*/
+.gridRecetas {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.tituloCentrado {
+    text-align: center;
+}
+.titulo {
+    font-size: 6vw;
+    margin: 15px;
+    font-weight: 700;
+
+}
+.subTitulo {
+    font-size: 6vw;
+    font-weight: 400;
+    margin: 15px;
+    color: #9A6C4C;
+}
+.fotoPrensaReceta{    
+    width: 75vw;
+}
+.parrafoPrensaReceta {
+    padding: 20px;
+    
+}
+.fotoMokaReceta{ 
+    width: 75vw;
+}
+.parrafoMokaReceta {
+    
+    padding: 10px 10px 5px 10px;
+    
+}
+.contenido1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+
+.contenido2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p {
+        
+    font-family: 'Roboto', cursive;
+    font-size: 6vw;
+    font-weight: 400;
+    text-align: justify;
+    line-height:1.5;
+
+}
+/*Pagina locaciones*/
+.mapouter{
+    display: flex;
+    justify-content: center;
+}
+#gmap_canvas {overflow:hidden;
+    background:none!important;
+    height:90vw;
+    width:90vw;
+}
+/*Pagina contacto*/
+.flexContacto{
+    display: flex;
+    
+    justify-content: center;
+}
+.contacto {
+    background-color: #B38665;/**/
+    border-radius: 25px;/**/
+    border-color: transparent;/**/
+    margin: 5vw 0 5vw 0;
+    width: 80vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-around;
+    font-family:'Roboto', cursive;
+}
+.tituloContacto {
+    font-family:'Comfortaa', cursive;
+    text-align: center;
+    font-size: 8vw;
+}
+.input{
+    background-color: #F7F2EE;
+    border-color: inherit;
+}
+.inputMargen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.inputElemento{
+    font-size: 3.5vw;
+}
+/*pagina productos*/
+.gridProductos{
+}
+.productos {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    grid-row-gap: 15px;
+    
+}
+.productos img {
+    width: 80%;
+}
+
+.opcionesFiltradoProductos {
+    padding: 10px;
+    display: inline;
+}
+.centrado {
+    text-align: center;
+}
+/*footer*/
+.footer {
+    background-color: #F7F2EE;
+    width: 100vw;
+    height: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    animation-name: animacionFooter;
+}
+.footer img {
+    width: 5vw;
+    transition: all 0.7s;
+}
+.footer img:hover {
+    transform:scale(1.05);
+    
+}
+@keyframes animacionIndex {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+@media (min-width:768px){
+    .menuIcono {
+        display: none;
+    }
+    nav {
+        width: 100vw;
+        position: relative;
+        top:-10px;
+        background-image: unset;
+      }
+    nav ul {
+        max-height: 70px;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    nav ul li {
+        
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5vw;
+    }
+    nav ul li ul li{
+        display:none;
+    
+    }
+    nav ul li:hover ul li, nav ul li:focus ul li{
+        display:inline-flex;
+        width: 100vw;
+        background-color: #ebe4de;
+
+    }
+    .flexIndex {
+        display: grid;
+        grid-template-areas: "imagen titulos";
+        justify-content:space-evenly;
+    }
+    /*nota:ver si hay variables para no repetir logica*/
+    .imagenIndex {
+        grid-area: imagen;
+        width: 40vw;
+        margin: 30px;
+        transition: all 0.8s;
+    }
+
+    .flexTitulos{
+        grid-area: titulos;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+    .titulo {
+        font-size: 6vw;
+        margin: 15px;
+        font-weight: 700;
+    
+    }
+    .subTitulo {
+        font-size: 2vw;
+        font-weight: 400;
+        margin: 15px;
+        color: #9A6C4C;
+    }    
+    .gridRecetas{
+        display: grid;
+        justify-content: space-around;
+        align-content: space-around;
+        grid-template-areas:    "titulo1"
+                                "contenido1"
+                                "titulo2"
+                                "contenido2";
+     
+    }
+    .titulo1{
+        grid-area: titulo1;
+    }
+    .contenido1{
+        grid-area: contenido1;
+        display: grid;
+        grid-template-areas:    "imagen1 parrafo1";
+    }
+    
+    .titulo2{
+        grid-area: titulo2;
+    }
+    
+    .contenido2{
+        grid-area: contenido2;
+        display: grid;
+        grid-template-areas:    "parrafo2 imagen2";
+    }
+    
+    p {
+        
+        font-size: 1.6vw;
+        line-height: 2;
+    
+    }
+    /*recordar apolicar flex para ordenar*/
+    .fotoPrensaReceta{    
+        grid-area: imagen1;
+        width: 30vw;
+    }
+    .parrafoPrensaReceta {
+        padding: 5px 10px 0px 10px;
+        grid-area: parrafo1;
+    }
+    .fotoMokaReceta{
+        grid-area: imagen2;
+        width: 30vw;
+    }
+    .parrafoMokaReceta {
+        margin: 5px 20px 5px 10px;
+        padding: 5px 10px 0px 10px;
+        grid-area: parrafo2;
+    }
+    .imagenIndex {
+        /*flex se encarga de acomodar la imagen*/
+    }
+
+    .contacto {
+        width: 50vw;
+        height: 55vw;
+        display: flex;
+        font-size: 24px;
+        border-radius: 5%;
+    }
+    .tituloContacto {
+        font-size: 3.5vw;
+    }
+    .input{
+        width: 15vw;
+        height: 1.8vw;
+        font-size: 1vw;
+    }
+ 
+    .inputElemento{
+        font-size: 2vw;
+        padding: 1vw 0 1vw 0;
+    }
+    
+    
+    .productos {
+        display: grid;
+        padding: 20px 0 20px 0;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+        grid-area: productos;
+    }
+    .productos img {
+        width:80%;
+        height:80%;
+    }
+    .opcionesFiltradoProductos {
+        font-family:'Roboto', cursive;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        grid-area: filtrado;
+    }
+    .footer {
+        background-color: #F7F2EE;
+        width: 100vw;
+        height: 5vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+ 
