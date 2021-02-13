@@ -1,0 +1,114 @@
+.navbar-color {
+  background-color: #F7F2EE; }
+
+/*Index*/
+.index {
+  text-align: center; }
+  .index .index__imagen {
+    border-radius: 10%; }
+  .index .index__titulo {
+    color: #000000; }
+  .index .index__subtitulo {
+    color: #9A6C4C; }
+
+/*recetas*/
+.receta .receta__parrafo {
+  font-size: 1.2rem !important;
+  padding: 1rem;
+  text-align: justify; }
+
+/*productos*/
+.img-producto {
+  max-width: 80%; }
+
+/*contacto*/
+.contacto .contacto__form {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding: 2rem;
+  border-radius: 1rem; }
+
+.contacto .contacto__form--color {
+  background-color: #B38665; }
+
+/*Locaciones*/
+.mapa .mapa__titulo {
+  margin: .3rem; }
+
+.mapa .mapa__outer {
+  display: flex;
+  justify-content: center; }
+
+#gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 80vh;
+  width: 80vw; }
+
+.titulo, .mapa .mapa__titulo {
+  text-align: center; }
+
+/**/
+.icon {
+  width: 10px; }
+
+footer {
+  margin-top: 1.5rem;
+  padding: 2.5rem;
+  background-color: #F7F2EE; }
+
+footer div div svg {
+  transform: scale(1.5); }
+
+/*animaciones*/
+.agrandar {
+  transition: all .5s; }
+
+.agrandar:hover {
+  transform: scale(1.05); }
+
+.aparecer {
+  animation-name: aparecer;
+  animation-duration: 3s;
+  animation-timing-function: ease-in; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+@media (min-width: 575.98px) {
+  .index .index__titulo {
+    font-size: 4rem; }
+  .index .index__subtitulo {
+    font-size: 2rem; }
+  #gmap_canvas {
+    overflow: hidden;
+    height: 85vh;
+    width: 85vw; } }
+
+@media (min-width: 767.98px) {
+  .index .index__imagen {
+    width: 50vw; }
+  .index .index__titulo {
+    font-size: 4rem; }
+  .index .index__subtitulo {
+    font-size: 2rem; }
+  .receta .receta__parrafo {
+    font-size: 1.4rem !important; }
+  footer div div svg {
+    transform: scale(2); } }
+
+/*@media (min-width: 991.98px) {}*/
+@media (min-width: 1199.98px) {
+  html {
+    font-size: 25px; }
+  .index .index__imagen {
+    width: 5vw; }
+  .index .index__titulo {
+    font-size: 5rem; }
+  .index .index__subtitulo {
+    font-size: 3rem; }
+  footer div div svg {
+    transform: scale(2.5); } }
