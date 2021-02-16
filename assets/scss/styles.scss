@@ -23,12 +23,18 @@
     width: auto;
     height: fit-content;
     .banner__image{
-        background-image: url(../../img/pexels-chevanon-photography-302899.jpeg);
+        
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
         min-height: 240px;
         width:auto;
+    }
+    .banner__image-index{
+        background-image: url(../../img/pexels-chevanon-photography-302899.jpeg);
+    }
+    .banner__image-recetas{
+        background-image: url(../../img/gc-libraries-creative-tech-lab-wiOEVPVRfW4-unsplash.jpeg);
     }
     h1{
         padding: 1rem;
@@ -37,12 +43,16 @@
         margin: 2rem;
     }
 }
+.card{
+    width: 85%;
+}
 .card__image{
     height: auto;
     width:100%;
 }
+
 .texto{
-    margin: 2em;
+    margin: 2em 0 2em 0;
     .texto__titulo{
         font-size: 1.5em;
     }
@@ -149,6 +159,9 @@ footer div div svg {
             min-height: 480px;
         }
     }
+    .card{
+        width: 18rem;
+    }
     #gmap_canvas {
         overflow:hidden;
         height:85vh;
@@ -179,7 +192,9 @@ footer div div svg {
             
         }
     }
-    
+    .card{
+        width: 22rem;
+    }
     .receta {
         .receta__parrafo{
         font-size:1.4rem!important;
@@ -210,7 +225,10 @@ footer div div svg {
             font-size: 3rem;
         }
     }
-    banner__image{
+    .card{
+        width: 22rem;
+    }
+    .banner__image{
         min-height: 1200px;
     }
     
