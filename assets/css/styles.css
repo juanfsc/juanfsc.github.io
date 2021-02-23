@@ -24,6 +24,8 @@
     background-image: url(../../img/pexels-chevanon-photography-302899.jpeg); }
   .banner .banner__image-recetas {
     background-image: url(../../img/gc-libraries-creative-tech-lab-wiOEVPVRfW4-unsplash.jpeg); }
+  .banner .banner__image-locaciones {
+    background-image: url(../../img/pexels-andrea-piacquadio-3796810.jpeg); }
   .banner h1 {
     padding: 1rem; }
   .banner .banner__content {
@@ -134,7 +136,7 @@ footer div div svg {
   .banner .banner__image {
     min-height: 720px; }
   .card {
-    width: 22rem; }
+    width: 25rem; }
   .receta .receta__parrafo {
     font-size: 1.4rem !important; }
   footer div div svg {
