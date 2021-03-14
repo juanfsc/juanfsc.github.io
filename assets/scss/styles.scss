@@ -1,4 +1,33 @@
-
+@import "./fontawesome.scss";
+@import "./solid.scss";
+.titulos,h1,h2{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: .250rem; 
+}
+.titulos-header{
+    font-size: 0.8rem;
+}
+.titulos-centrado{
+    text-align: center;
+}
+.textos,p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: .150rem; 
+}
+.textos-light{
+    font-weight: 300;
+}
+ul{
+    list-style: none;
+}
+a{
+    color:black;
+}
 .navbar-color {
     background-color: #F7F2EE;
 }
@@ -43,7 +72,24 @@
         padding: 1rem;
     }
     .banner__content{
-        margin: 2rem;
+        $margen: 50px;
+        
+        .banner__content-title{
+            @extend .titulos;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px black;
+            margin: $margen;
+            padding: 0px;
+        }
+        .banner__content-btn{
+            @extend .textos;
+            color: #000;
+            background-color: #fff;
+            border-color: #fff;
+            margin-left: $margen;
+            margin-bottom: $margen;
+            
+        }
     }
 }
 .card{
@@ -55,17 +101,37 @@
 }
 
 .texto{
-    margin: 2em 0 2em 0;
+    padding: 2.5em;
     .texto__titulo{
-        font-size: 1.5em;
+        padding: 2em 0 2em 0;
     }
-    .texto__parrafo{
-        line-height: 1.6;
-
-    }
-    
 }
-
+.scroll{
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    border-color: white;
+    >div{
+        margin-right: 20px;
+    }
+    .card{
+        width: 10rem;
+    }
+    .card-body{
+        min-height: 10rem;
+    }
+}
+.scroll::-webkit-scrollbar {
+    width: 12px;     
+    height: 8px;
+  }
+  
+  
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #000;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #777;  /* creates padding around scroll thumb */
+}
 
 /*recetas*/
 .receta {
@@ -121,11 +187,44 @@
 .icon {
     width: 10px;
 }
-
-footer {
+.show-large{
+    display: none;
+}
+.celda {
+    flex: 0 0 auto;
+    min-height: 0;
+    min-width: 0;
+    width: 100%;
+}
+.footer {
     margin-top: 1.5rem;
     padding: 2.5rem;
     background-color: #F7F2EE;
+    .footer__links{
+        .footer__links-titulo{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.625rem;
+            line-height: 1.25;
+            text-transform: uppercase;
+            letter-spacing: .125rem;
+        }
+    }
+    .footer__menu{
+        position:relative;
+        .footer__menu-titulo{
+            position: relative;
+            .footer__menu__title {
+                font-family: AvenirLTStd-Black;
+                text-transform: uppercase;
+                position: relative;
+                padding: 16px 0 40px;
+                letter-spacing: .125rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
 }
 footer div div svg {
     transform: scale(1.5);
@@ -174,6 +273,19 @@ footer div div svg {
 
 
 @media (min-width: 767.98px) {
+    .titulos,h1,h2{
+        font-size: 2rem;
+        line-height: 1.25;
+        letter-spacing: .500rem; 
+    }
+    .titulos-header{
+        font-size: 1.2rem;
+    }
+    .textos,p{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        letter-spacing: .100rem; 
+    }
     .index{
         .index__imagen{
             width: 50vw;
@@ -233,6 +345,17 @@ footer div div svg {
     }
     .banner__image{
         min-height: 1200px;
+    }
+    .scroll{
+        >div{
+            margin-right: 50px;
+        }
+        .card{
+            width: 10rem;
+        }
+        .card-body{
+            min-height: 10rem;
+        }
     }
     
     footer div div svg {
