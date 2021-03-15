@@ -1,5 +1,7 @@
 @import "./fontawesome.scss";
 @import "./solid.scss";
+
+  
 .titulos,h1,h2{
     font-family: 'Comfortaa', cursive;
     font-size: 1.5rem;
@@ -13,41 +15,42 @@
 .titulos-centrado{
     text-align: center;
 }
+.titulos-tienda{
+    font-size: .8rem;
+    letter-spacing: .50rem;
+}
 .textos,p{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: .150rem; 
 }
+
 .textos-light{
     font-weight: 300;
 }
+
+.textos-bold{
+    font-weight: 500;
+}
+
 ul{
     list-style: none;
 }
 a{
     color:black;
 }
+.navbar{
+    @extend .textos;
+    .navbar-brand{@extend .textos-bold;}
+    .navbar-nav, .form-control{@extend .textos-light}
+
+}
 .navbar-color {
     background-color: #F7F2EE;
 }
 /*Index*/
 
-.index{
-    text-align: center;
-    .index__imagen {
-        border-radius: 10%;
-        
-    }
-    
-    .index__titulo {
-        color: #000000;
-    }
-    .index__subtitulo { 
-        color: #9A6C4C;
-    }
-    
-}
 .banner{
     width: auto;
     height: fit-content;
@@ -93,7 +96,15 @@ a{
     }
 }
 .card{
+    $border-radius:3%;
     width: 85%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+    border: 0px solid #fff ;
+    border-radius:$border-radius;
+    img{
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
 }
 .card__image{
     height: auto;
@@ -111,23 +122,29 @@ a{
     display: flex;
     overflow-x: auto;
     border-color: white;
+    padding-bottom: .8rem;
     >div{
         margin-right: 20px;
     }
     .card{
         width: 10rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
     }
     .card-body{
         min-height: 10rem;
     }
 }
 .scroll::-webkit-scrollbar {
-    width: 12px;     
+    background-color: rgb(233, 233, 233);
+    width: 5px;     
     height: 8px;
+    
   }
   
   
 .scroll::-webkit-scrollbar-thumb {
+    
     background-color: #000;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 1px solid #777;  /* creates padding around scroll thumb */
@@ -145,7 +162,15 @@ a{
 
 .img-producto{
     max-width: 80%;
+
 }
+#sort {
+    background-color: #f7f2ee;
+    border-color: white;
+    
+    
+}
+
 /*contacto*/
 
 .contacto {
@@ -163,22 +188,6 @@ a{
 }
 
 /*Locaciones*/
-.mapa{
-    .mapa__titulo {
-        @extend .titulo;
-        margin: .3rem;
-    }
-    .mapa__outer{
-        display: flex;
-        justify-content: center;
-    }
-}
-
-#gmap_canvas {overflow:hidden;
-    background:none!important;
-    height:80vh;
-    width:80vw;
-}
 .titulo{
     text-align: center;
 }
@@ -226,10 +235,7 @@ a{
         }
     }
 }
-footer div div svg {
-    transform: scale(1.5);
-    
-}
+
 /*animaciones*/
 .agrandar{
     transition: all .5s;
@@ -264,11 +270,6 @@ footer div div svg {
     .card{
         width: 18rem;
     }
-    #gmap_canvas {
-        overflow:hidden;
-        height:85vh;
-        width:85vw;
-    }
 }
 
 
@@ -280,6 +281,10 @@ footer div div svg {
     }
     .titulos-header{
         font-size: 1.2rem;
+    }
+
+    .titulos-tienda{
+        font-size: .8rem;
     }
     .textos,p{
         font-size: 1.2rem;
@@ -302,10 +307,6 @@ footer div div svg {
         .banner__image{
             min-height: 720px;
         }
-        .banner__content{
-            //hacer que se vea dentro de la foto
-            
-        }
     }
     .card{
         width: 25rem;
@@ -315,9 +316,7 @@ footer div div svg {
         font-size:1.4rem!important;
         }
     }
-    footer div div svg {
-        transform: scale(2);
-    }
+    
 }
 
 

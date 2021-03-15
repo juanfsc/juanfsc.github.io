@@ -4595,14 +4595,21 @@ readers do not read off random characters that represent icons */
 .titulos-centrado {
   text-align: center; }
 
-.textos, .banner .banner__content .banner__content-btn, p {
+.titulos-tienda {
+  font-size: .8rem;
+  letter-spacing: .50rem; }
+
+.textos, .navbar, .banner .banner__content .banner__content-btn, p {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   letter-spacing: .150rem; }
 
-.textos-light {
+.textos-light, .navbar .navbar-nav, .navbar .form-control {
   font-weight: 300; }
+
+.textos-bold, .navbar .navbar-brand {
+  font-weight: 500; }
 
 ul {
   list-style: none; }
@@ -4614,15 +4621,6 @@ a {
   background-color: #F7F2EE; }
 
 /*Index*/
-.index {
-  text-align: center; }
-  .index .index__imagen {
-    border-radius: 10%; }
-  .index .index__titulo {
-    color: #000000; }
-  .index .index__subtitulo {
-    color: #9A6C4C; }
-
 .banner {
   width: auto;
   height: fit-content; }
@@ -4653,7 +4651,13 @@ a {
     margin-bottom: 50px; }
 
 .card {
-  width: 85%; }
+  width: 85%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+  border: 0px solid #fff;
+  border-radius: 3%; }
+  .card img {
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%; }
 
 .card__image {
   height: auto;
@@ -4668,16 +4672,20 @@ a {
   border: 1px solid #ddd;
   display: flex;
   overflow-x: auto;
-  border-color: white; }
+  border-color: white;
+  padding-bottom: .8rem; }
   .scroll > div {
     margin-right: 20px; }
   .scroll .card {
-    width: 10rem; }
+    width: 10rem;
+    margin-left: .5rem;
+    margin-right: .5rem; }
   .scroll .card-body {
     min-height: 10rem; }
 
 .scroll::-webkit-scrollbar {
-  width: 12px;
+  background-color: #e9e9e9;
+  width: 5px;
   height: 8px; }
 
 .scroll::-webkit-scrollbar-thumb {
@@ -4698,6 +4706,10 @@ a {
 .img-producto {
   max-width: 80%; }
 
+#sort {
+  background-color: #f7f2ee;
+  border-color: white; }
+
 /*contacto*/
 .contacto .contacto__form {
   margin-top: .5rem;
@@ -4709,20 +4721,7 @@ a {
   background-color: #B38665; }
 
 /*Locaciones*/
-.mapa .mapa__titulo {
-  margin: .3rem; }
-
-.mapa .mapa__outer {
-  display: flex;
-  justify-content: center; }
-
-#gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 80vh;
-  width: 80vw; }
-
-.titulo, .mapa .mapa__titulo {
+.titulo {
   text-align: center; }
 
 /**/
@@ -4762,9 +4761,6 @@ a {
         align-items: center;
         justify-content: space-between; }
 
-footer div div svg {
-  transform: scale(1.5); }
-
 /*animaciones*/
 .agrandar {
   transition: all .5s; }
@@ -4791,11 +4787,7 @@ footer div div svg {
   .banner .banner__image {
     min-height: 480px; }
   .card {
-    width: 18rem; }
-  #gmap_canvas {
-    overflow: hidden;
-    height: 85vh;
-    width: 85vw; } }
+    width: 18rem; } }
 
 @media (min-width: 767.98px) {
   .titulos, .banner .banner__content .banner__content-title, h1, h2 {
@@ -4804,7 +4796,9 @@ footer div div svg {
     letter-spacing: .500rem; }
   .titulos-header {
     font-size: 1.2rem; }
-  .textos, .banner .banner__content .banner__content-btn, p {
+  .titulos-tienda {
+    font-size: .8rem; }
+  .textos, .navbar, .banner .banner__content .banner__content-btn, p {
     font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: .100rem; }
@@ -4819,9 +4813,7 @@ footer div div svg {
   .card {
     width: 25rem; }
   .receta .receta__parrafo {
-    font-size: 1.4rem !important; }
-  footer div div svg {
-    transform: scale(2); } }
+    font-size: 1.4rem !important; } }
 
 /*@media (min-width: 991.98px) {}*/
 @media (min-width: 1199.98px) {
