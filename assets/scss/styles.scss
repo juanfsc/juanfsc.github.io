@@ -44,7 +44,13 @@ ul{
 a{
     color:black;
 }
+a:hover{
+    color:rgb(131, 131, 131);
+    text-decoration: none;
+}
 .navbar{
+    padding-bottom:0.1rem;
+    padding-top:0px;
     @extend .textos;
     .navbar-brand{@extend .textos-bold;}
     .navbar-nav, .form-control{@extend .textos-light}
@@ -53,6 +59,7 @@ a{
 .navbar-color {
     background-color: #F7F2EE;
 }
+
 /*Index*/
 
 .banner{
@@ -113,8 +120,9 @@ a{
     @extend.agrandar;
 
 }
-.card:not(:disabled) {
+.click .card:not(:disabled) {
     cursor: pointer;
+    @extend a;
 }
 .card__image{
     height: auto;
@@ -265,40 +273,7 @@ a{
 
 
 @media (min-width: 767.98px) {
-    .titulos,h1,h2{
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: .500rem; 
-    }
-    .titulos-header{
-        font-size: 1.2rem;
-    }
-
-    .titulos-tienda{
-        font-size: .8rem;
-    }
-    .textos,p{
-        font-size: 1.2rem;
-        line-height: 1.5;
-        letter-spacing: .100rem; 
-    }
-    .index{
-        .index__imagen{
-            width: 50vw;
-        }
-        .index__titulo{
-            font-size: 4rem;
-        }
-        .index__subtitulo{
-            font-size: 2rem;
-        }
-    }
-    .banner{        
-        
-        .banner__image{
-            min-height: 720px;
-        }
-    }
+    
     .card{
         width: 25rem;
     }

@@ -4617,8 +4617,16 @@ readers do not read off random characters that represent icons */
 ul {
   list-style: none; }
 
-a {
+a, .click .card:not(:disabled) {
   color: black; }
+
+a:hover, .click .card:hover:not(:disabled) {
+  color: #838383;
+  text-decoration: none; }
+
+.navbar {
+  padding-bottom: 0.1rem;
+  padding-top: 0px; }
 
 .navbar-color {
   background-color: #F7F2EE; }
@@ -4662,7 +4670,7 @@ a {
     border-top-left-radius: 3%;
     border-top-right-radius: 3%; }
 
-.card:not(:disabled) {
+.click .card:not(:disabled) {
   cursor: pointer; }
 
 .card__image {
@@ -4784,26 +4792,6 @@ a {
     width: 18rem; } }
 
 @media (min-width: 767.98px) {
-  .titulos, .banner .banner__content .banner__content-title, h1, h2 {
-    font-size: 2rem;
-    line-height: 1.25;
-    letter-spacing: .500rem; }
-  .titulos-header {
-    font-size: 1.2rem; }
-  .titulos-tienda {
-    font-size: .8rem; }
-  .textos, .navbar, .banner .banner__content .banner__content-btn, p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    letter-spacing: .100rem; }
-  .index .index__imagen {
-    width: 50vw; }
-  .index .index__titulo {
-    font-size: 4rem; }
-  .index .index__subtitulo {
-    font-size: 2rem; }
-  .banner .banner__image {
-    min-height: 720px; }
   .card {
     width: 25rem; }
   .receta .receta__parrafo {
