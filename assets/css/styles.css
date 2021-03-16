@@ -4608,6 +4608,9 @@ readers do not read off random characters that represent icons */
 .textos-light, .navbar .navbar-nav, .navbar .form-control {
   font-weight: 300; }
 
+.textos-dark {
+  color: black; }
+
 .textos-bold, .navbar .navbar-brand {
   font-weight: 500; }
 
@@ -4741,25 +4744,6 @@ a {
   margin-top: 1.5rem;
   padding: 2.5rem;
   background-color: #F7F2EE; }
-  .footer .footer__links .footer__links-titulo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.625rem;
-    line-height: 1.25;
-    text-transform: uppercase;
-    letter-spacing: .125rem; }
-  .footer .footer__menu {
-    position: relative; }
-    .footer .footer__menu .footer__menu-titulo {
-      position: relative; }
-      .footer .footer__menu .footer__menu-titulo .footer__menu__title {
-        font-family: AvenirLTStd-Black;
-        text-transform: uppercase;
-        position: relative;
-        padding: 16px 0 40px;
-        letter-spacing: .125rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
 
 /*animaciones*/
 .agrandar {
@@ -4768,9 +4752,9 @@ a {
 .agrandar:hover {
   transform: scale(1.05); }
 
-.aparecer {
+.aparecer, main {
   animation-name: aparecer;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-in; }
 
 @keyframes aparecer {
