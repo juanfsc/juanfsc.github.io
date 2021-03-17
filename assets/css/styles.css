@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4582,6 +4583,31 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+/*animaciones*/
+.agrandar, .card {
+  transition: all .5s; }
+
+.agrandar:hover, .card:hover {
+  transform: scale(1.02); }
+
+.encoger {
+  transition: all .5s; }
+
+.encoger:hover {
+  transform: scale(0.98); }
+
+.aparecer, main {
+  animation-name: aparecer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/*Común*/
 .titulos, .banner .banner__content .banner__content-title, h1, h2 {
   font-family: 'Comfortaa', cursive;
   font-size: 1.5rem;
@@ -4601,6 +4627,7 @@ readers do not read off random characters that represent icons */
 
 .textos, .navbar, .banner .banner__content .banner__content-btn, p {
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: .150rem; }
@@ -4625,16 +4652,22 @@ a:hover, .click .card:hover:not(:disabled) {
   text-decoration: none; }
 
 .navbar {
-  padding-bottom: 0.1rem;
-  padding-top: 0px; }
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem; }
 
 .navbar-color {
   background-color: #F7F2EE; }
 
-/*Index*/
+.navbar-toggler {
+  border-style: none; }
+
+.nav-link {
+  text-align: center; }
+
 .banner {
   width: auto;
-  height: fit-content; }
+  height: fit-content;
+  overflow: hidden; }
   .banner .banner__image {
     background-size: cover;
     background-position: center;
@@ -4677,10 +4710,9 @@ a:hover, .click .card:hover:not(:disabled) {
   height: auto;
   width: 100%; }
 
-.texto {
-  padding: 1.5em; }
-  .texto .texto__titulo {
-    padding: 2em 0 2em 0; }
+/*Index*/
+.card-index {
+  max-width: 15rem; }
 
 .scroll {
   border: 1px solid #ddd;
@@ -4690,7 +4722,7 @@ a:hover, .click .card:hover:not(:disabled) {
   padding-top: .8rem;
   padding-bottom: .8rem; }
   .scroll > div {
-    margin-right: 20px; }
+    margin-right: 1rem; }
   .scroll .card {
     width: 10rem;
     margin-left: .5rem;
@@ -4700,8 +4732,8 @@ a:hover, .click .card:hover:not(:disabled) {
 
 .scroll::-webkit-scrollbar {
   background-color: #e9e9e9;
-  width: 5px;
-  height: 8px; }
+  width: auto;
+  height: .5rem; }
 
 .scroll::-webkit-scrollbar-thumb {
   background-color: #000;
@@ -4718,13 +4750,6 @@ a:hover, .click .card:hover:not(:disabled) {
   text-align: justify; }
 
 /*productos*/
-.img-producto {
-  max-width: 80%; }
-
-#sort {
-  background-color: #f7f2ee;
-  border-color: white; }
-
 /*contacto*/
 .contacto .contacto__form {
   margin-top: .5rem;
@@ -4754,53 +4779,26 @@ a:hover, .click .card:hover:not(:disabled) {
 
 .footer {
   margin-top: 1.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
   background-color: #F7F2EE; }
 
-/*animaciones*/
-.agrandar, .card {
-  transition: all .5s; }
-
-.agrandar:hover, .card:hover {
-  transform: scale(1.02); }
-
-.encoger {
-  transition: all .5s; }
-
-.encoger:hover {
-  transform: scale(0.98); }
-
-.aparecer, main {
-  animation-name: aparecer;
-  animation-duration: 2s;
-  animation-timing-function: ease-in; }
-
-@keyframes aparecer {
-  0% {
-    opacity: 0%; }
-  100% {
-    opacity: 100%; } }
-
 @media (min-width: 575.98px) {
-  .index .index__titulo {
-    font-size: 4rem; }
-  .index .index__subtitulo {
-    font-size: 2rem; }
   .banner .banner__image {
-    min-height: 480px; }
+    min-height: 240px;
+    max-height: 310px; }
   .card {
     width: 18rem; } }
 
 @media (min-width: 767.98px) {
   .card {
     width: 25rem; }
+  .banner .banner__image {
+    min-height: 370px;
+    max-height: 85vh; }
   .receta .receta__parrafo {
     font-size: 1.4rem !important; } }
 
-/*@media (min-width: 991.98px) {}*/
 @media (min-width: 1199.98px) {
-  html {
-    font-size: 25px; }
   .index .index__imagen {
     width: 5vw; }
   .index .index__titulo {
@@ -4809,13 +4807,12 @@ a:hover, .click .card:hover:not(:disabled) {
     font-size: 3rem; }
   .card {
     width: 22rem; }
-  .banner__image {
-    min-height: 1200px; }
+  .banner .banner__image {
+    min-height: 580px;
+    max-height: 900px; }
   .scroll > div {
     margin-right: 50px; }
   .scroll .card {
     width: 10rem; }
   .scroll .card-body {
-    min-height: 10rem; }
-  footer div div svg {
-    transform: scale(2.5); } }
+    min-height: 10rem; } }

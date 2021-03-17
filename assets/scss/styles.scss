@@ -1,9 +1,30 @@
 @import "./fontawesome.scss";
 @import "./solid.scss";
 
-main{
-     @extend .aparecer;
-} 
+
+/*animaciones*/
+.agrandar{
+    transition: all .5s;
+}
+.agrandar:hover{
+    transform: scale(1.02);
+}
+.encoger{
+    transition: all .5s;
+}
+.encoger:hover{
+    transform: scale(0.98);
+}
+.aparecer{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-timing-function:ease-in; 
+}
+    @keyframes aparecer {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+/*Común*/
 .titulos,h1,h2{
     font-family: 'Comfortaa', cursive;
     font-size: 1.5rem;
@@ -23,6 +44,7 @@ main{
 }
 .textos,p{
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: .150rem; 
@@ -37,7 +59,9 @@ main{
 .textos-bold{
     font-weight: 500;
 }
-
+main{
+    @extend .aparecer;
+} 
 ul{
     list-style: none;
 }
@@ -49,8 +73,8 @@ a:hover{
     text-decoration: none;
 }
 .navbar{
-    padding-bottom:0.1rem;
-    padding-top:0px;
+    padding-bottom:0.5rem;
+    padding-top:0.5rem;
     @extend .textos;
     .navbar-brand{@extend .textos-bold;}
     .navbar-nav, .form-control{@extend .textos-light}
@@ -59,12 +83,17 @@ a:hover{
 .navbar-color {
     background-color: #F7F2EE;
 }
-
-/*Index*/
-
+.navbar-toggler {
+    border-style: none;
+    
+}
+.nav-link{
+    text-align: center;
+}
 .banner{
     width: auto;
     height: fit-content;
+    overflow: hidden;
     .banner__image{
         
         background-size:cover;
@@ -129,12 +158,11 @@ a:hover{
     width:100%;
 }
 
-.texto{
-    padding: 1.5em;
-    .texto__titulo{
-        padding: 2em 0 2em 0;
-    }
+/*Index*/
+.card-index{
+    max-width: 15rem;
 }
+
 .scroll{
     border: 1px solid #ddd;
     display: flex;
@@ -143,7 +171,7 @@ a:hover{
     padding-top: .8rem;
     padding-bottom: .8rem;
     >div{
-        margin-right: 20px;
+        margin-right: 1rem;
     }
     .card{
         width: 10rem;
@@ -156,8 +184,8 @@ a:hover{
 }
 .scroll::-webkit-scrollbar {
     background-color: rgb(233, 233, 233);
-    width: 5px;     
-    height: 8px;
+    width: auto;     
+    height: .5rem;
     
   }
   
@@ -178,17 +206,6 @@ a:hover{
     }
 }
 /*productos*/
-
-.img-producto{
-    max-width: 80%;
-
-}
-#sort {
-    background-color: #f7f2ee;
-    border-color: white;
-    
-    
-}
 
 /*contacto*/
 
@@ -226,44 +243,16 @@ a:hover{
 }
 .footer {
     margin-top: 1.5rem;
-    padding: 2.5rem;
+    padding: 2rem;
     background-color: #F7F2EE;
 }
 
-/*animaciones*/
-.agrandar{
-    transition: all .5s;
-}
-.agrandar:hover{
-    transform: scale(1.02);
-}
-.encoger{
-    transition: all .5s;
-}
-.encoger:hover{
-    transform: scale(0.98);
-}
-.aparecer{
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-timing-function:ease-in; 
-}
-    @keyframes aparecer {
-    0%{opacity: 0%;}
-    100%{opacity: 100%;}
-}
+
 @media (min-width: 575.98px) {
-    .index{
-        .index__titulo{
-            font-size: 4rem;
-        }
-        .index__subtitulo{
-            font-size: 2rem;
-        }
-    }
     .banner{
         .banner__image{
-            min-height: 480px;
+            min-height: 240px;
+            max-height: 310px;
         }
     }
     .card{
@@ -277,6 +266,12 @@ a:hover{
     .card{
         width: 25rem;
     }
+    .banner{
+        .banner__image{
+            min-height: 370px;
+            max-height: 85vh;
+        }
+    }
     .receta {
         .receta__parrafo{
         font-size:1.4rem!important;
@@ -286,14 +281,7 @@ a:hover{
 }
 
 
-
-/*@media (min-width: 991.98px) {}*/
-
-
 @media (min-width: 1199.98px) {
-    html{
-        font-size: 25px;
-    }
     .index{
         .index__imagen{
             width: 5vw;
@@ -308,8 +296,11 @@ a:hover{
     .card{
         width: 22rem;
     }
-    .banner__image{
-        min-height: 1200px;
+    .banner{
+        .banner__image{
+            min-height: 580px;
+            max-height: 900px;
+        }
     }
     .scroll{
         >div{
@@ -322,8 +313,5 @@ a:hover{
             min-height: 10rem;
         }
     }
-    
-    footer div div svg {
-        transform: scale(2.5);
-    }
+
 }
