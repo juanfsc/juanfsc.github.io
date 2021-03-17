@@ -229,17 +229,9 @@ a:hover{
 }
 /**/
 
-.icon {
-    width: 10px;
-}
+
 .show-large{
     display: none;
-}
-.celda {
-    flex: 0 0 auto;
-    min-height: 0;
-    min-width: 0;
-    width: 100%;
 }
 .footer {
     margin-top: 1.5rem;
@@ -263,8 +255,17 @@ a:hover{
 
 @media (min-width: 767.98px) {
     
-    .card{
-        width: 25rem;
+    .index .card{
+        min-width: 25rem;
+        .card-body{
+            min-height: 6rem;
+        }
+    }
+    .productos .card, .recetas .card{
+        min-width: 18rem;
+    }
+    .locaciones .card{
+        min-width: 20rem;
     }
     .banner{
         .banner__image{
@@ -272,9 +273,15 @@ a:hover{
             max-height: 85vh;
         }
     }
-    .receta {
-        .receta__parrafo{
-        font-size:1.4rem!important;
+    .scroll{
+        >div{
+            margin-right: 50px;
+        }
+        .card{
+            min-width: 15rem;
+        }
+        .card-body{
+            min-height: 5rem;
         }
     }
     
@@ -282,20 +289,19 @@ a:hover{
 
 
 @media (min-width: 1199.98px) {
-    .index{
-        .index__imagen{
-            width: 5vw;
-       }
-        .index__titulo{
-            font-size: 5rem;
-        }
-        .index__subtitulo{
-            font-size: 3rem;
+    .index .card{
+        min-width: 35rem;
+        .card-body{
+            min-height: 6rem;
         }
     }
-    .card{
-        width: 22rem;
+    .productos .card, .recetas .card{
+        min-width: 22rem;
     }
+    .locaciones .card{
+        min-width: 35rem;
+    }
+    
     .banner{
         .banner__image{
             min-height: 580px;
@@ -307,10 +313,10 @@ a:hover{
             margin-right: 50px;
         }
         .card{
-            width: 10rem;
+            min-width: 20rem;
         }
         .card-body{
-            min-height: 10rem;
+            min-height: 7rem;
         }
     }
 
